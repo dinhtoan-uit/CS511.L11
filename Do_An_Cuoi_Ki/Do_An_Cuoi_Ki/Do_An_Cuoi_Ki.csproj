@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FAB2BD8B-7350-44B9-B092-E445D370A996}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Do_An_Cuoi_Ki</RootNamespace>
+    <AssemblyName>Do_An_Cuoi_Ki</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="BarcodeLib">
+      <HintPath>..\..\..\Code Visual\C#\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.1.1.2225.0\lib\net20\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenTK.GLControl.1.1.2225.0\lib\net20\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vanara.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vanara.Core.3.3.0\lib\net45\Vanara.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.Shared, Version=3.3.0.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vanara.PInvoke.Shared.3.3.0\lib\net45\Vanara.PInvoke.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="ZedGraph, Version=5.1.5.28844, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZedGraph.5.1.5\lib\ZedGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAO\ChiTietHoaDonDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\HoaDonDAO.cs" />
+    <Compile Include="DAO\KhachHangDAO.cs" />
+    <Compile Include="DAO\NhanVienDAO.cs" />
+    <Compile Include="DAO\SanPhamDAO.cs" />
+    <Compile Include="DTO\ChiTietHoaDon.cs" />
+    <Compile Include="DTO\HoaDon.cs" />
+    <Compile Include="DTO\KhachHang.cs" />
+    <Compile Include="DTO\NhanVien.cs" />
+    <Compile Include="DTO\SanPham.cs" />
+    <Compile Include="fbanHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fbanHang.Designer.cs">
+      <DependentUpon>fbanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBaoCao.Designer.cs">
+      <DependentUpon>fBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDonHang.Designer.cs">
+      <DependentUpon>fDonHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fHoSo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fHoSo.Designer.cs">
+      <DependentUpon>fHoSo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fKhachHang.Designer.cs">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fNewPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fNewPerson.Designer.cs">
+      <DependentUpon>fNewPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fPrint.Designer.cs">
+      <DependentUpon>fPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSanPham.Designer.cs">
+      <DependentUpon>fSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MA_BAR_CODE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MA_BAR_CODE.Designer.cs">
+      <DependentUpon>MA_BAR_CODE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fbanHang.resx">
+      <DependentUpon>fbanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBaoCao.resx">
+      <DependentUpon>fBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDonHang.resx">
+      <DependentUpon>fDonHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fHoSo.resx">
+      <DependentUpon>fHoSo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fKhachHang.resx">
+      <DependentUpon>fKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fNewPerson.resx">
+      <DependentUpon>fNewPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fPrint.resx">
+      <DependentUpon>fPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSanPham.resx">
+      <DependentUpon>fSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MA_BAR_CODE.resx">
+      <DependentUpon>MA_BAR_CODE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="OpenTK.dll.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\fNewPerson.ShareData.datasource" />
+    <None Include="Properties\DataSources\ThongKe.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\3514981.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\2085.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\695.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\magnifying-glass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Layer 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\DongTien.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\Tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\129526.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icon\coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\soft-cloudy-is-gradient-pastel-abstract-sky-background-sweet-color_6529-1434.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Layer 11.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
